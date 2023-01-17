@@ -14,13 +14,13 @@ if pic:
     st.image(pic)
 
 file_path = os.path.dirname(__file__)
-img_path = os.path.join(file_path, 'images')
+pic_path = os.path.join(file_path, 'pics')
 
-if not os.path.exists(img_path):
-    os.mkdir(img_path)
+if not os.path.exists(pic_path):
+    os.mkdir(pic_path)
 
 if pic is not None:
     img_name = hakbun+name
     fname, ext = os.path.splitext(pic.name)
-    with open(os.path.join(img_path, fname+ext), 'wb') as f:
+    with open(os.path.join(pic_path, fname+ext), 'wb') as f:
         f.write(pic.getbuffer())
