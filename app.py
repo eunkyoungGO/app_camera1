@@ -20,7 +20,7 @@ if not os.path.exists(pic_path):
     os.mkdir(pic_path)
 
 if pic is not None:
-    img_name = hakbun+name
+    pic.name = hakbun+name
     fname, ext = os.path.splitext(pic.name)
     with open(os.path.join(pic_path, fname+ext), 'wb') as f:
         f.write(pic.getbuffer())

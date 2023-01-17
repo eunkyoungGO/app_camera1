@@ -1,11 +1,6 @@
 import streamlit as st
 import os.path
 
-pic = st.camera_input("사진찍기")
-
-if pic:
-    st.image(pic)
-
 img_path = os.path.join(os.path.dirname(__file__), 'images')
 
 if not os.path.exists(img_path):
