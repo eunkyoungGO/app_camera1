@@ -19,5 +19,5 @@ if pic:
 if pic is not None:
     pic.name = hakbun+name
     fname, ext = os.path.splitext(pic.name)
-    with open(os.path.join('pics', fname+ext), 'wb') as f:
+    with open(os.path.join('picss', fname+ext), 'wb') as f:
         f.write(pic.getbuffer())
