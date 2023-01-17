@@ -10,15 +10,8 @@ name = col2.text_input("이름")
 
 pic = st.camera_input("사진찍기")
 
-if pic:
-    st.image(pic)
-    img_path=os.path.join(os.path.dirname(__file__),'images')
-
-if not os.path.exists(img_path):
-    os.mkdir(img_path)
-
-uploaded_file=st.file_uploader("이미지선택", type=['jpg','png'])
-
-if uploaded_file is not None:
-    with open(os.path.join(img_path, uploaded_file.name),'wb') as f:
+if pic is not None:
+    img_name = hakbun+name
+    fname, ext = os.path.splitext(pic.name)
+    with open(os.path.join(img_path, img_name+ext),'wb') as f:
         f.write(uploaded_file.getbuffer())
