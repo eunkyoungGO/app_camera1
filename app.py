@@ -13,8 +13,8 @@ pic = st.camera_input("사진찍기")
 if pic:
     st.image(pic)
 
-    if not os.path.exists('pics'):
-        os.mkdir('pics')
+    if not os.path.exists('picss'):
+        os.mkdir('picss')
 
 if pic is not None:
     pic.name = hakbun+name
