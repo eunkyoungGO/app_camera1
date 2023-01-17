@@ -15,5 +15,5 @@ img_path = os.path.join(os.path.dirname(__file__), 'images')
 if pic is not None:
     img_name = hakbun+name
     fname, ext = os.path.splitext(pic.name)
-    with open(os.path.join(img_path, img_name+ext), 'wb') as f:
+    with open(os.path.join(img_path, fname+ext), 'wb') as f:
         f.write(pic.getbuffer())
