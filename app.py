@@ -13,14 +13,11 @@ pic = st.camera_input("사진찍기")
 if pic:
     st.image(pic)
 
-file_path = os.path.dirname(__file__)
-pic_path = os.path.join(file_path)
-
-if not os.path.exists(pic_path):
-    os.mkdir(pic_path)
+    if not os.path.exists('pics'):
+        os.mkdir('pics')
 
 if pic is not None:
     pic.name = hakbun+name
     fname, ext = os.path.splitext(pic.name)
-    with open(os.path.join(pic_path, fname+ext), 'wb') as f:
+    with open(os.path.join('pics', fname+ext), 'wb') as f:
         f.write(pic.getbuffer())
