@@ -1,5 +1,4 @@
 import streamlit as st
-import os
 import os.path
 
 img_path = os.path.join(os.path.dirname(__file__), 'images')

@@ -1,5 +1,4 @@
 import streamlit as st
-import os
 import os.path
 
 st.subheader("학생사진촬영")
